@@ -25,3 +25,19 @@ body,
 .el-pagination {
   margin-top: 15px;
 }
+
+.el-cascader__dropdown {
+  top: 300px!important;
+}
+
+.el-cascader-menu {
+  height: 204px!important;
+}
+
+.el-scrollbar__thumb {
+  height: 0!important;
+}
+
+.el-scrollbar__wrap {
+  margin-right: 0!important;
+}

@@ -99,10 +99,7 @@
     </el-dialog>
 
    <!-- 分配权限对话框 -->
-   <el-dialog
-  title="分配权限"
-  :visible.sync="setRightDialogVisible"
-  width="50%" @close="setRightDialogClosed">
+   <el-dialog title="分配权限" :visible.sync="setRightDialogVisible" width="50%" @close="setRightDialogClosed">
     <!-- 树形控件 -->
     <el-tree :data="rightslist" :props="treeProps" show-checkbox node-key="id" default-expand-all :default-checked-keys="defKeys" ref="treeRef"></el-tree>
     <span slot="footer" class="dialog-footer">
