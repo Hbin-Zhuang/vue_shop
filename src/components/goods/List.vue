@@ -67,7 +67,7 @@
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button @click="editDialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="editGoodsInfo">确 定</el-button>
+        <el-button type="primary" @click="editListInfo">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -213,17 +213,19 @@ export default {
       this.$refs.editFormRef.resetFields()
     },
     // 修改商品信息并提交
-    editGoodsInfo () {
+    editListInfo () {
       this.$refs.editFormRef.validate(async valid => {
         if (!valid) return
         // 发起修改商品信息的数据请求
-        const { data: res } = await this.$http.put('goods/' + this.editForm.id, {
+        const { data: res } = await this.$http.put('goods/' + this.editForm.goods_id, {
           goods_name: this.editForm.goods_name,
           goods_price: this.editForm.goods_price,
           goods_number: this.editForm.goods_number,
           goods_weight: this.editForm.goods_weight,
-          goods_introduce: this.editForm.goods_introduce
+          goods_introduce: this.editForm.goods_introduce,
+          goods_cat: this.editForm.goods_cat // 根据 network 的提示 msg: "商品没有设置所属分类", 从而设置商品的分类goods_cat
         })
+        console.log(res.data)
 
         if (res.meta.status !== 200) {
           return this.$message.error('更新商品信息失败！')
