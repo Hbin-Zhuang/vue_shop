@@ -217,12 +217,13 @@ export default {
       this.$refs.editFormRef.validate(async valid => {
         if (!valid) return
         // 发起修改商品信息的数据请求
-        const { data: res } = await this.$http.put('goods/' + this.editForm.id, {
+        const { data: res } = await this.$http.put('goods/' + this.editForm.goods_id, {
           goods_name: this.editForm.goods_name,
           goods_price: this.editForm.goods_price,
           goods_number: this.editForm.goods_number,
           goods_weight: this.editForm.goods_weight,
-          goods_introduce: this.editForm.goods_introduce
+          goods_introduce: this.editForm.goods_introduce,
+          goods_cat: this.editForm.goods_cat // 根据 network 提示msg: "商品没有设置所属分类" 设置 商品分类goods_cat属性
         })
 
         if (res.meta.status !== 200) {
