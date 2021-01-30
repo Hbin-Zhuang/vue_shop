@@ -18,7 +18,7 @@ export default {
     }
   },
 
-  provide() {
+  provide () {
     return {
       timeline: this
     }
@@ -26,7 +26,7 @@ export default {
 
   watch: {
     reverse: {
-      handler(newVal) {
+      handler (newVal) {
         if (newVal) {
           this.$slots.default = [...this.$slots.default].reverse()
         }
