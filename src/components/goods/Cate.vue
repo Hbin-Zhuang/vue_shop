@@ -215,9 +215,7 @@ export default {
       // 反之，就说明没有选中任何父级分类
       if (this.selectedKeys.length > 0) {
         // 父级分类的Id
-        this.addCateForm.cat_pid = this.selectedKeys[
-          this.selectedKeys.length - 1
-        ]
+        this.addCateForm.cat_pid = this.selectedKeys[this.selectedKeys.length - 1]
         // 为当前分类的等级赋值
         this.addCateForm.cat_level = this.selectedKeys.length
       } else {

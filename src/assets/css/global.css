@@ -26,10 +26,6 @@ body,
   margin-top: 15px;
 }
 
-.el-cascader__dropdown {
-  top: 300px!important;
-}
-
 .el-cascader-menu {
   height: 204px!important;
 }
@@ -40,4 +36,16 @@ body,
 
 .el-scrollbar__wrap {
   margin-right: 0!important;
+}
+
+.el-steps {
+  margin: 15px 0;
+}
+
+.el-step__title {
+  font-size: 13px;
+}
+
+.ql-editor {
+  min-height: 300px;
 }
