@@ -1,5 +1,7 @@
 # vue_shop
 
+项目在线地址： http://hbin-zhaung.top:3301
+
 ## Project setup
 ```
 npm install
